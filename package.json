@@ -1,5 +1,5 @@
 {
-  "name": "github-search",
+  "name": "github-search-redux",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://genier-developer.github.io/redux-github-search",
