@@ -7,18 +7,18 @@ export function RepoCard({ repo }: { repo: IRepo }) {
     const {addFavourite, removeFavourite} = useActions()
     const {favourites} = useAppSelector(state => state.github)
 
-    const [isFav, setIsFav] = useState(favourites.includes(repo.html_url))
+    const [isFavorite, setIsFavorite] = useState(favourites.includes(repo.html_url))
 
     const addToFavourite = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault()
         addFavourite(repo.html_url)
-        setIsFav(true)
+        setIsFavorite(true)
     }
 
     const removeFromFavourite = (event: React.MouseEvent<HTMLButtonElement>) => {
         event.preventDefault()
         removeFavourite(repo.html_url)
-        setIsFav(false)
+        setIsFavorite(false)
     }
 
     return (
@@ -31,12 +31,12 @@ export function RepoCard({ repo }: { repo: IRepo }) {
                 </p>
                 <p className="text-sm font-thin">{repo?.description}</p>
 
-                {!isFav && <button
+                {!isFavorite && <button
                     className="py-2 px-4 bg-yellow-400 mr-2 rounded hover:shadow-md transition-all"
                     onClick={addToFavourite}
                 >Add</button>}
 
-                {isFav && <button
+                {isFavorite && <button
                     className="py-2 px-4 bg-red-400 rounded hover:shadow-md transition-all"
                     onClick={removeFromFavourite}
                 >Remove</button>}
