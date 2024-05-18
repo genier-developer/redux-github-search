@@ -41,7 +41,7 @@ export function HomePage() {
                         <li
                             key={user.id}
                             onClick={() => clickHandler(user.login)}
-                            className="py-2 px-4 hover:bg-gray-500 hover:text-white transition-colors cursor-pointer"
+                            className="py-2 px-4 hover:bg-slate-500 hover:text-white transition-colors cursor-pointer"
                         >{ user.login }</li>
                     )) }
                 </ul>}

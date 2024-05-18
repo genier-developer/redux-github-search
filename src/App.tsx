@@ -3,7 +3,7 @@ import {Routes, Route} from 'react-router-dom'
 import {HomePage} from './pages/HomePage'
 import {FavouritesPage} from './pages/FavoritesPages'
 import {Navigation} from './components/Navigation'
-//test
+
 function App() {
     return (
         <>
